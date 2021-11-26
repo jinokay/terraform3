@@ -8,3 +8,7 @@ resource "aws_lb" "wook_alb" {
     "Name" = "wook-alb"
   }
 }
+
+output "dns_name" {
+  value = aws_lb.wook_alb.dns_name
+}
