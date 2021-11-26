@@ -1,5 +1,5 @@
-resource "aws_launch_configuration" "wook_lach" {
-  name                 = "wook-lucf"
+resource "aws_launch_configuration" "wook_lacf" {
+  name                 = "wook-lacf"
   image_id             = aws_ami_from_instance.wook_ami.id
   instance_type        = "t2.micro"
   iam_instance_profile = "admin_role"

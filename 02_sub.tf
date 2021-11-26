@@ -7,12 +7,12 @@ resource "aws_subnet" "wook_puba" {
   }
 }
 
-resource "aws_subnet" "wook_pubd" {
+resource "aws_subnet" "wook_pubc" {
   vpc_id            = aws_vpc.wook_vpc.id
   cidr_block        = "10.0.1.0/24"
-  availability_zone = "ap-northeast-2d"
+  availability_zone = "ap-northeast-2c"
   tags = {
-    "Name" = "wook-pubd"
+    "Name" = "wook-pubc"
   }
 }
 
@@ -25,12 +25,12 @@ resource "aws_subnet" "wook_pria" {
   }
 }
 
-resource "aws_subnet" "wook_prid" {
+resource "aws_subnet" "wook_pric" {
   vpc_id            = aws_vpc.wook_vpc.id
   cidr_block        = "10.0.3.0/24"
-  availability_zone = "ap-northeast-2d"
+  availability_zone = "ap-northeast-2c"
   tags = {
-    "Name" = "wook-prid"
+    "Name" = "wook-pric"
   }
 }
 
@@ -43,11 +43,11 @@ resource "aws_subnet" "wook_prida" {
   }
 }
 
-resource "aws_subnet" "wook_pridd" {
+resource "aws_subnet" "wook_pridc" {
   vpc_id            = aws_vpc.wook_vpc.id
   cidr_block        = "10.0.5.0/24"
-  availability_zone = "ap-northeast-2d"
+  availability_zone = "ap-northeast-2c"
   tags = {
-    "Name" = "wook-pridd"
+    "Name" = "wook-pridc"
   }
 }
