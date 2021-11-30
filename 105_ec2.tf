@@ -21,7 +21,7 @@ resource "aws_instance" "wook_web" {
   key_name               = var.key
   vpc_security_group_ids = [aws_security_group.wook_sg.id]
   availability_zone      = "${var.region}${var.ava_zone[0]}"
-  private_ip             = "10.0.0.11"
+  private_ip             = var.pri_ip
   subnet_id              = aws_subnet.wook_pub[0].id
   user_data = file("./dbdate.sh")
 
@@ -33,7 +33,7 @@ resource "aws_instance" "wook_web" {
 resource "aws_eip" "wook_web_ip" {
   vpc                       = true
   instance                  = aws_instance.wook_web.id
-  associate_with_private_ip = "10.0.0.11"
+  associate_with_private_ip = var.pri_ip
   depends_on                = [aws_internet_gateway.wook_ig]
 }
 
